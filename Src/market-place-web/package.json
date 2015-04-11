@@ -1,0 +1,12 @@
+{
+	"name": "market-place",
+	"description": "Online market place",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"express":"*",
+		"ejs":"*",
+		"mongodb":"*",
+		"monk":"*"
+	}
+}

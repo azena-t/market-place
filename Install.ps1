@@ -1,0 +1,1 @@
+mongod --config X:\host\market-place\Data\marketPlaceDB.cfg --serviceName marketPlaceDB --serviceDisplayName "Market Place Mongo DB" --install
