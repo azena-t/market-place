@@ -7,6 +7,7 @@
 		"express":"*",
 		"ejs":"*",
 		"mongodb":"*",
-		"monk":"*"
+		"monk":"*",
+		"compress":"*"
 	}
 }
