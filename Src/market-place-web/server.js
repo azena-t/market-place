@@ -1,31 +1,22 @@
-var express = require('express');
-var app = express();
+var hapi = require('hapi');
+var server = new hapi.Server();
 
-app.use(express.compress());
+var serverConfig = {
+	port : 8081
+};
 
-app.set('view engine', 'ejs');
-app.set('views', __dirname+'/views');
+var indexConfig = {
+	method : 'GET',
+	path : '/',
+	handler : {
+		file : 'index.html'
+	}
+};
 
-app.use('/static', express.static(__dirname + '/static'));
+server.connection(serverConfig);
 
-app.use(express.bodyParser());
-app.use(express.cookieParser('SecretPhrase'));
-app.use(express.session());
+server.start(function(){
+	console.log("Server running with config: " + serverConfig);
+});
 
-/*register controllers*/
-var loginController = require('./controllers/Login');
-var homeController = require('./controllers/Home');
-var registrationController = require('./controllers/Registration');
-var errorController = require('./controllers/Error');
-
-/*register actions*/
-app.get('/', loginController.restrict, homeController.index);
-app.get('/login', loginController.index);
-app.get('/login/authenticate', loginController.authenticate);
-app.get('/register', registrationController.index);
-app.post('/register/user', registrationController.registerUser);
-
-app.use(errorController.index);
-
-app.listen(80);
-console.log('Listening on port 80');
+server.route(indexConfig);

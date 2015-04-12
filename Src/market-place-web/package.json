@@ -4,10 +4,8 @@
 	"version": "0.0.1",
 	"private": true,
 	"dependencies": {
-		"express":"*",
-		"ejs":"*",
+		"hapi":"*",
 		"mongodb":"*",
-		"monk":"*",
-		"compress":"*"
+		"monk":"*"
 	}
 }
