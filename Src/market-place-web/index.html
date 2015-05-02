@@ -1,9 +1,40 @@
-<html>
+<!doctype html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="/static/css/default.css" />
+		<script src="/static/script/angular.min.js"></script>
+		<script src="/static/script/angular-route.min.js"></script>
+		<script src="/static/script/angular-resource.min.js"></script>
+		<script src="/static/js/app.js"></script>
+		<script src="/static/js/basket/factories/basketFactory.js"></script>
+		<script src="/static/js/basket/services/basketService.js"></script>
+		<script src="/static/js/rootController.js"></script>
+		<script src="/static/js/search/controllers/searchController.js"></script>
+		<script src="/static/js/home/controllers/homeController.js"></script>
+<!--		<script src="/static/js/item/directives/itemDirective.js"></script>-->
 		<title>Home page</title>
 	</head>
-	<body>
-		<h1>Hello world!</h1>
-		<p>Powered using Hapi</p>
+	<body ng-app="marketPlaceApp" ng-controller="rootController">
+		<div id="body-container">
+			<div id="header">
+				<div id="header-title" ng-click="goHome()">
+					<h1>Market Place</h1>
+				</div>
+				<div id="header-search">
+					<div id="header-search-box">
+						<input type="text" id="header-search-input" ng-model="searchTerm" 
+						ng-keyup="$event.keyCode == 13 ? search(searchTerm) : null" />
+						<button id="header-search-button" ng-click="search(searchTerm)">&gt;</button>
+					</div>
+				</div>
+				<div id="basket">{{basket.count}} items - £{{basket.price}}</div>
+			</div>
+			<div id="head-spacer" class="mt50"></div>
+			<div ng-view></div>
+			<div id="footer">
+				<p>&copy; 2015 - Kevin Timmins</p>
+			</div>
+		</div>
 	</body>
 </html>

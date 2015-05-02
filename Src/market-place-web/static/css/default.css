@@ -1,3 +1,161 @@
-#loginForm{
-	border: thin solid #000000;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+	END OF RESET SCRIPT
+*/
+
+/*
+	Pallete http://paletton.com/palette.php?uid=74Y240kyg5WbLAs0nXgrNIGvcqx
+*/
+
+body{
+	min-width: 1400px;
+	font-family: Arial, sans-serif;
+}
+
+.mt50{
+	margin-top: 50px;
+}
+
+h1{
+	font-size: 2em;
+	font-weight: bold;	
+}
+
+#body-container{
+	width: 80%;
+	position: relative;
+	top: 0%;
+	left: 10%;
+	
+}
+#header{
+	position: static;
+	top:0;
+	width: 100%;
+	padding: 0.6em 0.1em 0.4em 0.1em;
+	margin-top: 0;
+	background-color: #20001D;
+	display: inline-block;
+	height: 3em;
+}
+#header-title{
+	float: left;
+	width: 19%;
+	color: #F5F3F5;
+	padding-left: 1%;
+	padding-top: 0.3em;
+	vertical-align: bottom;
+	cursor: pointer;
+}
+#header-search{
+	float: left;
+	width: 60%;
+}
+
+#header-search-box{
+	height: 2em;
+	border-top-left-radius: 0.3em;
+	border-bottom-left-radius: 0.3em;
+	border-bottom-right-radius: 0.3em;
+	border-top-right-radius: 0.3em;
+	border-top: #BB77B5 solid 3px;
+	border-bottom: #BB77B5 solid 3px;
+	border-left: #BB77B5 solid 3px;
+	border-right: #BB77B5 solid 3px;
+	background-color: #F5F3F5;
+	margin: 0;
+	padding: 0;
+	margin-top: 0.1em;
+}
+#header-search-input{
+	width: 94%;
+	height: 2em;
+	border: none;
+	margin-top: 0.2em;
+	padding: 0;
+	background-color: #F5F3F5;
+	padding-left: 0.5em;
+}
+#header-search-input:focus{
+	outline:none;
+}
+#header-search-button{
+	float: right;
+	border:none;
+	border-bottom-right-radius: 0.1em;
+	border-top-right-radius: 0.1em;
+	background-color: #900484;
+	height: 100%;
+	width: 5%;
+	margin:0;
+	padding-left: 0;
+	padding-right: 0.7em;
+	vertical-align: middle;
+	text-align: right;
+	color: #F5F3F5;
+	font-weight: bolder;
+	cursor: pointer;
+	font-size: 1.3em;
+}
+#header-search-button:focus{
+	outline: none;
+}
+
+
+#basket{
+	float: right;
+	width: 19%;
+	padding-top: 0.7em;
+	padding-right: 1%;
+	text-align: right;
+	color: #F1DBF1;
+	font-size: 1.1em;
 }

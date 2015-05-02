@@ -1,0 +1,12 @@
+<div>
+	<div class="feature-item">
+		<img src="/static/images/{{itemOfTheDay.imgUri}}.jpg" 
+			alt="{{itemOfTheDay.name}} image" />
+		<div class="feature-item-image"></div>
+		<div class="feature-item-title">{{itemOfTheDay.name}}</div>
+		<div class="feature-item-description">{{itemOfTheDay.description}}</div>
+		<div class="feature-item-price">{{itemOfTheDay.price}}</div>
+		<div class="feature-item-link" ng-click="goToItem(itemOfTheDay.itemId)">Details</div>
+		<div class="feature-item-buy buy-button" ng-click="addToBasket(itemOfTheDay)">Buy</div>
+	</div>
+</div>
